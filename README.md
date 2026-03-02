@@ -2,6 +2,8 @@
 
 這個專案提供一個**車輛 ReID（Re-Identification）相似度比對**的簡易 Demo：輸入兩張圖片，先（可選）用 YOLO 偵測並裁切主要車輛，再用 ReID 模型抽特徵，計算兩張圖的 **cosine similarity**，並用 matplotlib 將結果並排顯示與輸出耗時統計。
 
+使用前先從網址把ALL MODEL下載下來並在這個資料夾裡面解壓縮
+
 ### 主要功能
 
 - **YOLO 車輛偵測/裁切（可選）**：使用根目錄的 `best.pt`，取面積最大的車輛框做裁切。
@@ -23,6 +25,9 @@
 - **Python**：建議 3.10+（`test.py` 內已做 `collections` 相容處理）
 - **PyTorch / CUDA**：依你的環境安裝對應版本；`requirements.txt` 內的 torch/torchvision 版本偏向 CUDA 11.8
 
+### same car dataset
+- google drive上面分別有兩個資料夾，裡面放同車不同角度的圖片可供測試
+  
 ### 安裝方式
 
 在專案根目錄執行：
@@ -39,7 +44,7 @@ pip install -r fast-reid/docs/requirements.txt
 
 > 備註：FastReID 依賴在不同環境可能還需要額外處理（例如 `faiss-gpu`、編譯等）。若匯入失敗，`test.py` 會自動回退到簡化 ResNet50 流程，仍可跑通整體比對。
 
-### 權重檔放置
+### 權重檔放置，從網址把ALL MODEL下載下來並在這個資料夾裡面解壓縮
 
 請確認以下檔案位於**專案根目錄**：
 
