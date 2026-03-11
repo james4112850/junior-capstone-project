@@ -1,0 +1,2 @@
+解壓縮後pip install -r requirement.txt ， python version==3.12
+https://drive.google.com/file/d/1tYD56JGMFsE08TeXoK70o_D9h4oq8lF8/view?usp=sharing
